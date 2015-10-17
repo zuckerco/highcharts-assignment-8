@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>My first chart with Highcharts</title>
+
+        <!-- add jQuery in the head of your page -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+        <!-- add Highcharts in the head of your page -->
+        <script src="js/highcharts.js"></script>
+
+        <!-- change to another Highcharts theme - optional -->
+        <script src="js/themes/dark-green.js"></script>
+
+        <!-- add print and export features - this is optional -->
+        <script src="js/modules/exporting.js"></script>
+</head>
+<body>
+
+<h1>My first chart with Highcharts</h1>
+
+<!-- add the container div - you can adjust width and height -->
+<div id="container" style="width: 50%; height: 400px;"></div>
+
+<p>This is an example of a simple chart embedded in a Web page. The chart data came from Highcharts: <a href="http://www.highcharts.com/docs/getting-started/your-first-chart" target="_blank">Your First Chart</a>.</p>
+
+<p>Charts are usually placed somewhere in the middle of an article for which the chart provides additional information. Most numerical data is easier for the reader to understand when it appears in chart form.</p>
+
+<!-- add the script for the chart BEFORE the closing /body tag -->
+<script>
+$(document).ready(function(){
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges', 'Mangoes']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit that was eaten last week'
+            }
+        },
+        series: [{
+            name: 'Scott',
+            data: [1, 0, 4, 2]
+        }, {
+            name: 'Susan',
+            data: [5, 7, 3, 0]
+        }]
+    });
+});
+</script>
+
+
+</body>
+</html>
