@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Internet privacy poll </title>
+	<link href="styles/main.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+	<script src="js/highcharts.js"></script>
+</head>
+<body>
+	<h1>How do people feel about their online and offline privacy?</h1>
+	<div id="container" style="width:100%; height:400px;"></div>
+	<script>
+	$(function() {
+  $('#container').highcharts({
+    chart: {
+      type: 'bar'
+    },
+    title: {
+      text: 'Online and Offline Privacy'
+    },
+		subtitle: {
+				text: 'Source: <a href="http://www.pewinternet.org/datasets/jan-27-feb-16-2015-privacy-panel-4/">pewinternet.org</a>'
+		},
+    xAxis: {
+      categories: ['Being in control of who can get information about you', 'Not having someone watch you or listen to you without your permission', 'Controlling what information is collected about you', 'Being able to share confidential matters with someone you trust', 'Being able to go around in public without always being identified']
+    },
+    yAxis: {
+      min: 0,
+      max: 100,
+      title: {
+        text: 'Respondents\' answers'
+      }
+    },
+    legend: {
+      reversed: true
+    },
+    plotOptions: {
+      series: {
+        stacking: 'normal'
+      }
+    },
+    series: [{
+      name: 'Very important',
+      data: [74, 67, 65, 72, 34]
+    }, {
+      name: 'Somewhat important',
+      data: [19, 20, 25, 21, 29]
+    }, {
+      name: 'Not very important',
+      data: [3, 8, 5, 2, 25]
+    }, {
+      name: 'Not at all important',
+      data: [1, 1, 1, 1, 6]
+    }, {
+      name: 'Don\'t know',
+      data: [1, 2, 1, 1, 4]
+    }, {
+      name: 'Refused',
+      data: [2, 2, 3, 3, 2]
+    }]
+  });
+});
+
+</script>
+<div id="second" style="width:100%; height:400px;"></div>
+
+<script>
+$(function () {
+    $('#second').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Trading Privacy for Cell Phone Games'
+        },
+        subtitle: {
+            text: 'Source: <a href="http://www.pewinternet.org/datasets/jan-27-feb-16-2015-privacy-panel-4/">pewinternet.org</a>'
+        },
+        xAxis: {
+            categories: ['Yes', 'No', 'It depends', 'Refused'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            max: 100,
+            title: {
+                text: 'Number of respondents',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' people'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Respondents',
+            data: [13, 76, 9, 1]
+        }]
+    });
+});
+</script>
+
+</body>
+</html>
