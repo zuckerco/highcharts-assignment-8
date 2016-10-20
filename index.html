@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Internet privacy poll </title>
 	<link href="styles/main.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
@@ -9,7 +10,8 @@
 </head>
 <body>
 	<h1>How do people feel about their online and offline privacy?</h1>
-	<div id="container" style="width:100%; height:400px;"></div>
+	<h2>By Ryan Serpico</h2>
+	<div id="container" style="width:100%; height:400px;">
 	<script>
 	$(function() {
   $('#container').highcharts({
@@ -63,7 +65,15 @@
 });
 
 </script>
-<div id="second" style="width:100%; height:400px;"></div>
+</div>
+<p>In a survey conducted by the <a href="http://www.pewinternet.org/datasets/jan-27-feb-16-2015-privacy-panel-4/">Pew Research Center</a>, researchers gauged the attitudes of adults toward their privacy in both online and offline environments.
+	Those surveyed were asked questions that how important it is to them how in control of who can get information on them and being able to share confidential matters with someone they trust.
+	 This is a growing topic among the public because our growing use of smartphones and the internet where we are sharing more personal information than ever.
+	  Whether its some &#8220;<a href="http://www.nytimes.com/2016/09/29/well/live/a-400-pound-hacker-trump-comment-ignites-fat-shaming-debate.html?_r=0">400-pound hacker</a>&#8221; or the NSA,
+		there are hacking groups out there who are always working on a way to break into our private information. The results of this survey show that the public is concerned over who has access of their private lives,
+		 whether it be online or offline. </p>
+
+<div id="second" style="width:100%; height:400px;">
 
 <script>
 $(function () {
@@ -112,7 +122,7 @@ $(function () {
             y: 80,
             floating: true,
             borderWidth: 1,
-            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#E9E9E9'),
             shadow: true
         },
         credits: {
@@ -125,6 +135,13 @@ $(function () {
     });
 });
 </script>
+</div>
+<p>In a survey conducted by the <a href="http://www.pewinternet.org/datasets/jan-27-feb-16-2015-privacy-panel-4/">Pew Research Center</a>, researchers
+	asked adults if they would be willing to give access to their cell phone&#8217;s camera and current location in order to play a free game that they were interested in playing in.
+	The question included that access to the camera and current location is essential to the app&#8217;s
+	functionality and that it could not be disabled. Giving apps access to these features gives companies a lot of access to one&#8217;s personal life. Ever since the App Store arrived in 2008, iPhones have included a feature that prompts users for their approval of apps&#8217; access to iPhone features, such as the camera or contacts.
+	The results show that adults are not comfortable at all with this scenario at all, which is strange, considering these were the <em>exact</em>
+	permissions given to the Pokemon GO app that was hugely popular during summer 2016. </p>
 
 </body>
 </html>
