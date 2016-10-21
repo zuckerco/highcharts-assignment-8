@@ -16,6 +16,10 @@ body {
   margin: 10px 100px;
   background-color: #E9E9E9;
 }
+#second {
+  width:50%;
+  margin: auto;
+}
 .highcharts-background {
 	fill: #E9E9E9;
 }
